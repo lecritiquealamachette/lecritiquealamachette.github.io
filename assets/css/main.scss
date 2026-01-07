@@ -168,3 +168,33 @@ body {
     margin-top: 20px !important;     /* Espace avec le bloc du dessus */
     flex-basis: 100% !important;     /* Force le retour à la ligne */
 }
+/* RÉPARATIONS FINALES DES COLLISIONS */
+.post {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    height: auto !important; /* On laisse la vignette grandir selon le contenu */
+    padding: 25px !important;
+    overflow: visible !important; /* Empêche de couper ce qui dépasse */
+}
+
+/* On protège l'image */
+.post img {
+    max-width: 150px !important;
+    height: auto !important;
+    margin-bottom: 20px !important; /* Espace pour ne pas toucher le lecteur */
+    object-fit: contain !important;
+}
+
+/* On protège le bloc texte */
+.post .title, .post .excerpt-container {
+    margin-bottom: 20px !important;
+}
+
+/* ON RÉPARE LE LECTEUR AUDIO */
+.player-container, audio {
+    flex-basis: 100% !important; /* Force le lecteur à prendre sa propre ligne */
+    width: 100% !important;
+    margin-top: 10px !important;
+    margin-left: 0 !important;   /* Aligne bien à gauche */
+    clear: both !important;      /* Interdit tout élément sur ses côtés */
+}
