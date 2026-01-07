@@ -42,3 +42,29 @@ a:hover {
     border-radius: 15px; /* Coins un peu arrondis */
     box-shadow: 0 4px 15px rgba(0,0,0,0.5); /* Ombre pour donner du relief */
 }
+
+/* Rend la vague invisible ou noire */
+.wave {
+    background: #0b0e14 !important; 
+    display: none; /* Ou 'none' pour la supprimer complètement */
+}
+
+/* Animation de l'ombre qui respire */
+@keyframes pulseBlue {
+    0% { box-shadow: 0 0 5px rgba(0, 212, 255, 0.2); }
+    50% { box-shadow: 0 0 20px rgba(0, 212, 255, 0.6); }
+    100% { box-shadow: 0 0 5px rgba(0, 212, 255, 0.2); }
+}
+
+/* Application à la sidebar */
+#sidebar {
+    border: 1px solid rgba(0, 212, 255, 0.3) !important;
+    animation: pulseBlue 4s infinite ease-in-out;
+}
+
+/* Application aux lecteurs audio (une fois qu'ils seront là) */
+.audio-player, audio {
+    animation: pulseBlue 4s infinite ease-in-out;
+    border-radius: 30px;
+    background-color: #161b22;
+}
