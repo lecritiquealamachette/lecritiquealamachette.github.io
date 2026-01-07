@@ -19,3 +19,15 @@ body {
 .wave {
     display: none !important;
 }
+/* --- SUPPRESSION DÉFINITIVE DE LA VAGUE --- */
+.wave, .waves, #wave, #waves, .header-wave, .footer-wave {
+    display: none !important;
+    background-image: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+}
+
+/* On retire aussi l'éventuel fond de couleur qui simule une vague */
+#header::after, #header::before {
+    display: none !important;
+}
