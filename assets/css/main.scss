@@ -237,3 +237,23 @@ body {
     margin-top: 10px !important;
     box-sizing: border-box !important;
 }
+/* RÉAFFICHAGE DE LA DESCRIPTION */
+.post .excerpt, 
+.post .post-excerpt, 
+.post .entry-content, 
+.post p {
+    grid-column: 2 !important; /* Force le texte dans la colonne de droite */
+    grid-row: 1 !important;    /* Force le texte sur la même ligne que l'image */
+    display: block !important;  /* Force l'apparition si c'était caché */
+    color: #90a4ae !important;  /* Ton gris pour la lisibilité */
+    margin-top: 40px !important; /* Descend le texte sous le titre */
+    visibility: visible !important;
+}
+
+/* On s'assure que le titre reste bien en haut à droite */
+.post h2 {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    margin: 0 !important;
+    align-self: start !important;
+}
