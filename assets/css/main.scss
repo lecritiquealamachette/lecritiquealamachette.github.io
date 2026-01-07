@@ -198,3 +198,42 @@ body {
     margin-left: 0 !important;   /* Aligne bien à gauche */
     clear: both !important;      /* Interdit tout élément sur ses côtés */
 }
+/* --- RÉPARATION ULTIME : DISPOSITION EN GRILLE --- */
+.post {
+    display: grid !important;
+    /* On crée 2 colonnes (Image à gauche, Texte à droite) et 2 lignes (Haut et Lecteur) */
+    grid-template-columns: 150px 1fr !important; 
+    grid-template-rows: auto auto !important;
+    gap: 20px !important;
+    height: auto !important;
+    padding: 25px !important;
+    box-sizing: border-box !important; /* Force le calcul interne pour ne pas déborder */
+}
+
+/* L'IMAGE (Ligne 1, Colonne 1) */
+.post img {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    width: 150px !important;
+    height: 150px !important;
+    object-fit: contain !important;
+    margin: 0 !important;
+}
+
+/* LE TEXTE (Ligne 1, Colonne 2) */
+.post .title, .post .excerpt-container, .post .content-right {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    margin: 0 !important;
+    overflow-wrap: break-word !important; /* Empêche le texte de pousser la barre à droite */
+}
+
+/* LE LECTEUR AUDIO (Ligne 2, prend TOUTE la largeur) */
+.player-container, audio, .audio-player {
+    grid-column: 1 / span 2 !important; /* S'étale sur les 2 colonnes */
+    grid-row: 2 !important;
+    width: 100% !important;
+    max-width: 100% !important; /* Empêche strictement de dépasser à droite */
+    margin-top: 10px !important;
+    box-sizing: border-box !important;
+}
