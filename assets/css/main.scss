@@ -307,3 +307,30 @@ body {
     grid-area: player !important;
     width: 100% !important;
 }
+/* FORCE LE TITRE ET LE TEXTE À RESTER ENSEMBLE À DROITE */
+.post h2, .post p, .post .excerpt {
+    grid-column: 2 !important; /* Toujours dans la colonne de droite */
+    grid-row: 1 !important;    /* Toujours sur la première ligne (au-dessus du lecteur) */
+    display: block !important;
+}
+
+/* On ajuste les marges pour qu'ils ne se chevauchent pas entre eux */
+.post h2 {
+    margin-top: 0 !important;
+    margin-bottom: 10px !important;
+    padding-bottom: 0 !important;
+}
+
+.post p, .post .excerpt {
+    /* On utilise padding-top au lieu de margin pour mieux contrôler l'espace */
+    padding-top: 40px !important; 
+    margin: 0 !important;
+    z-index: 2; /* S'assure qu'il passe devant d'éventuels résidus de décor */
+}
+
+/* ON RE-VERROUILLE LE LECTEUR TOUT EN BAS */
+.player-container, audio {
+    grid-column: 1 / span 2 !important; /* Prend toute la largeur */
+    grid-row: 2 !important;            /* Force le passage à la ligne 2 */
+    margin-top: 15px !important;       /* Espace de sécurité */
+}
