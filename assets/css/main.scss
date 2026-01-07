@@ -125,3 +125,14 @@ body {
 .home, .wrapper, #main {
     padding-top: 10px !important;
 }
+/* RE-CALAGE DE LA SIDEBAR (MÉTHODE FORCÉE) */
+#sidebar {
+    /* Force la descente par rapport au haut de la page */
+    top: 100px !important; 
+    
+    /* Supprime les anciens décalages */
+    transform: none !important;
+    
+    /* Sécurité supplémentaire */
+    margin-top: 0 !important;
+}
