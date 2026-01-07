@@ -2,3 +2,43 @@
 ---
 
 @import "base", "background", "header", "sidebar", "home", "post", "archive", "player";
+/* --- Style Personnalisé L'Écho des Songes --- */
+
+/* 1. Fond et texte général */
+body {
+    background-color: #0b0e14 !important; /* Noir bleuté profond */
+    color: #cfd8dc !important;          /* Gris clair bleuté pour le texte */
+    font-family: 'Georgia', serif;      /* Une police un peu plus "contée" */
+}
+
+/* 2. Sidebar (là où est ton Moine) */
+#sidebar {
+    background-color: #161b22 !important;
+    border-right: 1px solid #30363d;
+}
+
+/* 3. Liens et titres */
+a, .post-link {
+    color: #4fc3f7 !important; /* Bleu clair électrique */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #81d4fa !important;
+    text-decoration: underline;
+}
+
+/* 4. Le titre du site dans l'info */
+#info h3 {
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* 5. Le Moine (Sidebar-logo) */
+.sidebar-logo {
+    width: 100%;
+    height: auto;
+    border-radius: 15px; /* Coins un peu arrondis */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5); /* Ombre pour donner du relief */
+}
