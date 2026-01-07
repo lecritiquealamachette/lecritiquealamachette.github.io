@@ -31,18 +31,29 @@ body {
 #header::after, #header::before {
     display: none !important;
 }
-/* HALO BLEU SUR LES LECTEURS AUDIO */
-.player-container, .audio-player, audio {
-    background: #161b22 !important; /* Fond sombre pour trancher */
-    border: 1px solid #00d4ff !important; /* Bordure néon */
-    box-shadow: 0 0 15px rgba(0, 212, 255, 0.4) !important; /* Le halo bleu */
-    border-radius: 30px !important; /* Arrondi pour un look moderne */
-    margin-bottom: 20px;
-    padding: 5px;
+/* HALO AUTOUR DES VIGNETTES (POSTS) */
+.post {
+    background: #161b22 !important; /* Fond légèrement plus clair que le noir pur */
+    border: 1px solid rgba(0, 212, 255, 0.3) !important; /* Bordure bleue fine */
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.2) !important; /* Halo bleu doux */
+    border-radius: 12px !important; /* Arrondi des angles de la vignette */
+    padding: 15px !important;
+    margin-bottom: 30px !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Pour que rien ne dépasse de la vignette */
 }
 
-/* Optionnel : Changement de couleur au survol pour l'interactivité */
-.player-container:hover {
-    box-shadow: 0 0 25px rgba(0, 212, 255, 0.6) !important;
-    transition: 0.3s;
+/* EFFET AU SURVOL : La vignette s'illumine quand on passe la souris */
+.post:hover {
+    transform: translateY(-5px); /* Petit soulèvement */
+    box-shadow: 0 0 35px rgba(0, 212, 255, 0.5) !important; /* Halo plus intense */
+    border: 1px solid #00d4ff !important;
+}
+
+/* ON NETTOIE LE LECTEUR À L'INTÉRIEUR */
+.player-container, audio {
+    box-shadow: none !important; /* On enlève le halo interne pour ne garder que l'externe */
+    border: none !important;
+    background: transparent !important;
+    width: 100% !important;
 }
