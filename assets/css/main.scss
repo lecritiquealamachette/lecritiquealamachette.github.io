@@ -136,3 +136,25 @@ body {
     /* Sécurité supplémentaire */
     margin-top: 0 !important;
 }
+/* 1. On charge la police depuis ton dossier fonts */
+@font-face {
+    font-family: 'ZombieHunger';
+    src: url('../fonts/Zombie-Hunger.otf') format('opentype');
+}
+
+/* 2. On l'applique uniquement au titre */
+.site-title {
+    font-family: 'ZombieHunger', fantasy;
+    font-size: 32px;      /* Ajuste la taille selon tes goûts */
+    color: #cc0000;       /* Couleur rouge sang */
+    text-align: center;
+    margin-bottom: 10px;  /* Espace avant le logo */
+    display: block;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Pour que ça ressorte bien */
+}
+
+/* On s'assure que le logo est bien centré sous le titre */
+.sidebar-logo {
+    display: block;
+    margin: 0 auto;
+}
