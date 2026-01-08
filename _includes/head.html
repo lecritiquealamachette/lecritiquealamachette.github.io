@@ -26,19 +26,21 @@
     {% if site.data.settings.analytics-id%}
         {%- include analytics.html -%}
     {% endif %}
-    <style>
+   <style>
   @font-face {
     font-family: 'ZombieHunger';
-    src: url('https://lecritiquealamachette.github.io/assets/fonts/Zombie-Hunger.otf') format('opentype');
+    /* On retire /assets/ car le dossier est à la racine */
+    src: url('/fonts/Zombie-Hunger.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
   }
 
-  .site-title {
+  h1.site-title, .site-title {
     font-family: 'ZombieHunger', fantasy !important;
     color: #cc0000 !important;
     font-size: 32px !important;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
     display: block !important;
-    text-align: center !important;
   }
 </style>
 </head>
