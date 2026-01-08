@@ -14,10 +14,11 @@ layout: default
     display: block !important;
     transform: none !important;
   }
-  /* On s'assure que le cadre de l'article ne laisse rien sortir */
-  .single-post {
+  .single-post img {
+    max-width: 100%;
+    height: auto;
     display: block !important;
-    overflow: visible !important;
+    margin: 0 auto 20px auto !important; /* Force le centrage horizontal */
   }
 </style>
 
