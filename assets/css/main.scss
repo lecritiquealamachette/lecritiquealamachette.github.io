@@ -167,3 +167,29 @@ body {
 .post, .post-item, .vignette {
   animation: pulse 2.5s infinite ease-in-out;
 }
+/* 1. L'animation (on reste sur du blanc/gris pour respecter tes couleurs) */
+@keyframes pulse {
+  0% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.2); }
+  50% { box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.6); }
+  100% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.2); }
+}
+
+/* 2. On l'applique à la sidebar (le bloc qui contient ton logo et ta description) */
+.sidebar {
+  animation: pulse 3s infinite ease-in-out !important;
+  padding: 15px; /* Pour que le halo ne soit pas collé au contenu */
+  border-radius: 10px;
+}
+
+/* 3. On l'applique au bloc de contenu (là où sont tes vignettes/sons) */
+.content {
+  animation: pulse 4s infinite ease-in-out !important;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* 4. Effet bonus sur ton nouveau logo micro.jpg */
+.sidebar-logo {
+  animation: pulse 5s infinite ease-in-out !important;
+  border-radius: 50%; /* Si ton logo est rond, le halo sera rond */
+}
