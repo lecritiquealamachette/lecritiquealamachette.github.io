@@ -1,7 +1,7 @@
 # Site settings
-title: "Le critique à la machette"
-description: "Parce que certains films méritent d'être découpés en morceaux."
-podcast-description: "Parce que certains films méritent d'être découpés en morceaux. "
+title: "RDSB 79"
+description: "Écoutez ce qui n'est pas censé exister."
+podcast-description: "Écoutez ce qui n'est pas censé exister. "
 url: "https://lecritiquealamachette.github.io"
 baseurl: ""
 author:
